@@ -9,6 +9,7 @@ function solve(kg, dimension) {
     }
 
     if(dimension > 158) {
+        
         let diff = dimension - 158;
 
         if(diff >= 1 && diff <= 20) {
@@ -21,26 +22,20 @@ function solve(kg, dimension) {
             charge += 200;
             sizeFee = 'Oversize';
         }
-    }
 
-    if(weightFee == 'Overweight' && sizeFee == 'Oversize') {
-        charge += 50;
-        console.log(`$${charge} (${weightFee}) + (${sizeFee}) + (Handling)`);
-    } 
-    
-    if(weightFee != '' && sizeFee != '') {
-        console.log(`$${charge} (${weightFee}) + (${sizeFee})`);
-    }
-
-    if(weightFee == '' && sizeFee != '') {
-        console.log(`$${charge} (${sizeFee})`);
-    }
-
-    if(sizeFee == '' && weightFee != '') {
-        console.log(`$${charge} (${weightFee})`);
+        if(weightFee == 'Overweight' && sizeFee == 'Oversize') {
+            console.log(`$${charge} + (${weightFee} + ${sizeFee} + Handling)`);
+        } else {
+            if(weightFee == '') {
+                console.log(`$${charge} + (${sizeFee})`);
+            } else {
+                console.log(`$${charge} + (${weightFee} + ${sizeFee})`);
+            }
+        }
     }
 }
 
 solve(52, 160);
 solve(48, 180);
 solve(55, 190);
+solve(45, 133);
