@@ -21,3 +21,4 @@ function printTriangle(side) {
 }
 
 printTriangle(7);
+printTriangle(3);
