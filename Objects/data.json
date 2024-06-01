@@ -1,0 +1,10 @@
+{
+    "name": "Pesho",
+    "age": 30,
+    "isMale": true,
+    "grades": [ 2,4,6 ],
+    "location": {
+        "lat": 123123,
+        "lng": 321321
+    }
+}
