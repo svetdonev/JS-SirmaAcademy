@@ -4,6 +4,10 @@ class Cat {
         this.name = name;
         this.age = age;
     }
+
+    makeSound() {
+        console.log(this.name + ': Meow...');
+    }
 }
 
 class Dog {
@@ -21,3 +25,6 @@ console.log(secondCat);
 
 console.log(firstCat instanceof Cat);
 console.log(secondCat instanceof Dog);
+
+firstCat.makeSound();
+secondCat.makeSound();
